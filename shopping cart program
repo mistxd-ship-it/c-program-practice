@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+    char item[50] = "";
+    float price = 0.0;
+    int quantity = 0;
+    char currency = '$';
+    float total = 0.0f;
+
+     printf("what is the item you want to buy: ");
+     fgets(item ,sizeof (item), stdin);
+     item[strlen (item)-1] = '\0';
+
+     printf("what is the price of the item: ");
+     scanf("%f", &price);
+
+     printf("what is the quantity of the item: ");
+     scanf("%d", &quantity);
+
+     total = price * quantity;
+     printf("you have bought %d %s\n", quantity, item);
+     printf("the total cost is: %.2f %c\n", total, currency);
+
+     return 0;
+}
+
+
