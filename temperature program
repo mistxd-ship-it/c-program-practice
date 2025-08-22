@@ -1,0 +1,39 @@
+# include <stdio.h>
+
+int main() {
+    char choice = '\0';
+    float fahrenheit = 0.0f;
+    float celsius = 0.0f;
+
+    printf("Temperature conversion program");
+    printf("c. celsius to fahrenheit\n");
+    printf("f. fahrenheit to celsius\n");
+    printf("is the temperature in celsius(C) or fahrenheit(F)?: ");
+
+
+    scanf("%c", &choice);
+
+    if(choice == 'c' || 'C'){
+        printf("enter the temperature in celsius:");
+        scanf("%f", &celsius);
+        fahrenheit= (celsius * 9/5)+32;
+        printf("%.1f celsius is equal to %.1f fahrenheit\n",celsius , fahrenheit );
+    }
+    else if (choice == 'f' || 'F'){
+        printf("enter the temperatue in fahrenheit: ");
+        scanf("%f", &fahrenheit);
+        celsius = (fahrenheit -32) * 5/9 ;
+        printf("%.1f fahrenheit is equal to %.1f clesius \n", fahrenheit , celsius );
+    
+    }
+    else{
+        printf("invalid choice! please select c or f\n");
+    
+    }
+    return 0;
+
+}
+
+   
+
+    
